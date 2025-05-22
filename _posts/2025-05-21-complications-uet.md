@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Complications series: UET's diary
+title: Complications series - UET's diary
 subtitle: 
 categories: complications
 author: tangha1004

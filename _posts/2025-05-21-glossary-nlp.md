@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Glossary: NLP
+title: Glossary - NLP
 subtitle:
 categories: glossary
 author: tangha1004

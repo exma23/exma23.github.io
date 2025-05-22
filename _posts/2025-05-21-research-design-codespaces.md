@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Research tips: designing codespaces
+title: Research tips - designing codespaces
 subtitle:
 categories: research
 author: tangha1004
