@@ -8,7 +8,58 @@ tags: [example]
 top: 2
 ---
 
-![banner](https://github.com/jeffreytse/jekyll-theme-yat/assets/9413601/2ed22d49-90b1-4f7e-8e8f-b77b21dee505)
+1; property for OOP Python
+
+- https://www.programiz.com/python-programming/property
+
+2; Python OOP base concepts
+
+- https://www.geeksforgeeks.org/python-oops-concepts/
+
+3; Python’s conventions
+
+- @property, @classmethod, @staticmethod, @contextmanager
+- private variables/functions: _encode → _X; attributes of a class: __len__
+- **kwargs vs *args
+    - *args: take in more arguments than the number of formal arguments that you previously defined. with *args, take in more arguments than the number of formal arguments that you previously defined
+        
+        ```python
+        def myFun(arg1, *argv):
+            print("First argument :", arg1)
+            for arg in argv:
+                print("Next argument through *argv :", arg)
+        
+        myFun('Hello', 'Welcome', 'to', 'GeeksforGeeks')
+        ```
+        
+    - ***kwargs* in function definitions in Python is used to pass a keyworded, variable-length argument list → *kwargs* as being a dictionary that maps each keyword to the value that we pass alongside it. That is why when we iterate over the *kwargs* there doesn’t seem to be any order in which they were printed out.
+    
+    ```python
+    def myFun(arg1, **kwargs):
+        for key, value in kwargs.items():
+            print("%s == %s" % (key, value))
+    
+    # Driver code
+    myFun("Hi", first='Geeks', mid='for', last='Geeks')
+    ```
+    
+    - distinguish: *args receives arguments as a tuple.
+    **kwargs receives arguments as a dictionary.
+
+def myFun(*args, **kwargs):
+    print("args: ", args)
+    print("kwargs: ", kwargs)
+
+
+# Now we can use both *args ,**kwargs
+# to pass arguments to this function :
+myFun('geeks', 'for', 'geeks', first="Geeks", mid="for", last="Geeks")
+
+=> args: ('geeks', 'for', 'geeks')
+kwargs: {'first': 'Geeks', 'mid': 'for', 'last': 'Geeks'}
+
+
+<!-- ![banner](https://github.com/jeffreytse/jekyll-theme-yat/assets/9413601/2ed22d49-90b1-4f7e-8e8f-b77b21dee505)
 
 Paragraphs are separated by a blank line.
 
@@ -165,4 +216,4 @@ math should get its own line like so:
 $$I = \int \rho R^{2} dV$$
 
 And note that you can backslash-escape any punctuation characters
-which you wish to be displayed literally, ex.: \`foo\`, \*bar\*, etc.
+which you wish to be displayed literally, ex.: \`foo\`, \*bar\*, etc. -->
