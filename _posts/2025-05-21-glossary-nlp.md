@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "This post demonstrates post content styles"
-categories: junk
-author: "Bart Simpson"
-meta: "Springfield"
+title: Glossary: NLP
+subtitle:
+categories: glossary
+author: tangha1004
+tags: [nlp]
 ---
 
 
