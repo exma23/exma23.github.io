@@ -241,6 +241,15 @@ yat:
 
 # Build settings
 # highlighter: none
+
+# Add this to your existing config or modify if already present
+banner:
+  height: "400px"         # Reduce from default 640px
+  min_height: null
+  opacity: 1.0
+  background: "rgba(0, 0, 0, 0.8)"
+
+
 markdown: kramdown
 kramdown:
   input: GFM
