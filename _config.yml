@@ -249,7 +249,7 @@ banner:
   opacity: 1.0
   background: "rgba(0, 0, 0, 0.8)"
 
-favicon: "assets/rose_4279123.png"
+favicon: "assets/blossom.png"
 
 
 markdown: kramdown
