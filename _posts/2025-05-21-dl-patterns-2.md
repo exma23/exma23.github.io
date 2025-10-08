@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Deep learning patterns 1
+title: Deep learning patterns 2
 subtitle:
 categories: dl
 author: tangha1004
