@@ -2,7 +2,7 @@
 layout: post
 title: Deep Learning by Ian Goodfellow (part 1)
 subtitle:
-categories: books
+categories: deep learning
 author: tangha1004
 tags: [deep learning]
 ---

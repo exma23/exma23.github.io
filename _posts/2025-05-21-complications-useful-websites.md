@@ -4,9 +4,8 @@ title: Complications series - useful websites
 subtitle: 
 categories: complications
 author: tangha1004
-tags: [websites]
+tags: [complications]
 ---
-
 
 Các source học ML, DL dễ dàng:
 - https://jalammar.github.io/ (learn about transformer)
