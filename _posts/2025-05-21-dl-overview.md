@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Deep Learning by Ian Goodfellow (part 1)
+title: Overview of deep learning
 subtitle:
-categories: deep learning
+categories: dl
 author: tangha1004
 tags: [deep learning]
 ---

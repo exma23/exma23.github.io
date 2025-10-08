@@ -2,9 +2,9 @@
 layout: post
 title: Generative models 2
 subtitle: 
-categories: deep learning
+categories: dl
 author: tangha1004
 tags: [deep learning]
 ---
 
-GAN, normalizing flow
+GAN, normalizing flow, lda

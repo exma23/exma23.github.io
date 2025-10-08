@@ -4,7 +4,7 @@ title: Research tips - designing codespaces
 subtitle:
 categories: research
 author: tangha1004
-tags: [code tips]
+tags: [research]
 ---
 
 1; property for OOP Python

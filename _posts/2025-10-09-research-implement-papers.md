@@ -4,7 +4,7 @@ title: Research tips - implementing papers
 subtitle:
 categories: research
 author: tangha1004
-tags: [code tips]
+tags: [research]
 ---
 
 [What makes some CS papers easier to implement than others?](https://www.quora.com/unanswered/What-makes-some-CS-papers-easier-to-implement-than-others)

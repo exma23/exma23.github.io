@@ -2,7 +2,7 @@
 layout: post
 title: Deep learning patterns 1
 subtitle:
-categories: deep learning
+categories: dl
 author: tangha1004
 tags: [deep learning]
 ---

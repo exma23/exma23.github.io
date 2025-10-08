@@ -4,7 +4,7 @@ title: Glossary - NLP
 subtitle:
 categories: glossary
 author: tangha1004
-tags: [nlp]
+tags: [glossary]
 ---
 
 

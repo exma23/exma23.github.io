@@ -2,7 +2,7 @@
 layout: post
 title: Overview of multimodal learning
 subtitle: 
-categories: deep learning
+categories: dl
 author: tangha1004
 tags: [deep learning]
 ---

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Github (part 1)
+title: Glossary - Github
 subtitle:
-categories: fundamental CS
+categories: glossary
 author: tangha1004
-tags: [code tips]
+tags: [glossary]
 ---
 
 GIT commands in one place
