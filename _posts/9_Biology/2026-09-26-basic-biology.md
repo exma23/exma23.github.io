@@ -35,7 +35,7 @@ author: exma23
 # **II. Chemical context of life**
 ## **1. Chemistry reminder**
 - Subatomic particles: neutrons and protons are packed together tightly to form a dense core, or atomic nucleus at the center of the atom.
-    ![Fig 1: Atom](/assets/images/basic_biology/atom.png)
+    ![Fig 1: Atom](/assets/images/9_Biology/basic_biology/atom.png)
     - **Electrons**: moving at nearly the speed of light, form a cloud around the nucleus.
 
     The more distant the electrons are from the nucleus, the greater their **potential energy**. The different states of potential energy that electrons have in an atom are called energy levels. An electron energy level is correlated with its average distance from the nucleus. When an electron absorbs energy, it moves to a shell farther out from the nucleus. For example, light energy can excite an electron to a higher energy level. When an electron loses energy, it "falls back" to a shell closer to the nucleus, and the lost energy is usually relesed to the environment in the form of heat. For example, sunlight excites electrons in the paint of a dark car to higher energy levels. When the electron fall back to their original levels, the surface of the car heats up. This thermal energy can be transferred to the air or to your hand if you touch the car.
@@ -55,11 +55,11 @@ author: exma23
 ## **2. Protein**
 Protein are all polymers constructed from the same set of 20 amino acids. Polyemer of amino acids are called polypeptides:
 - Amino acids are organic molecules possessing both carboxyl and amino groups. Its four different partners are an amino group (-NH2), a carboxyl group (-COOH), a hydrogen atom, and a variable group symbolized by R.
-    ![Fig 2: Amino acid](/assets/images/basic_biology/amino_acid.png)
+    ![Fig 2: Amino acid](/assets/images/9_Biology/basic_biology/amino_acid.png)
 
     The R group, also called the side chain, differs with each amino acid.
 - When two amino acids are positioned so that the carboxyl group of one is adjacent to the amino group of the other, an enzyme can cause them to join by catalyzing a **dehydration reaction** (dehydration reactions link), with the removal of a water molecule. The resulting covalent bond is called a **peptide bond**. Repeated over and over, this process yields a polypeptide, a polymer of many amino acids linked by peptide bonds. At one end of the polypeptide chain is a free amino group; at the opposite end is a free carboxyl group. Thus, the chain has an amino end (N-termmus) and a carboxyl end (C-terminus)
-    ![Fig 3: Polypeptide chain](/assets/images/basic_biology/peptide.png)
+    ![Fig 3: Polypeptide chain](/assets/images/9_Biology/basic_biology/peptide.png)
 
     Sanger's approach was to use protein-digesting enzymes and other catalysts that break polypeptides at specific places rather than completely hydrolyzing the chains to amino acids. Treatment with one of these agents cleaves a polypeptide into fragments (each consisting of multiple amino acid subunits) that can be separated by a technique called chromatography. Hydrolysis with a different agent breaks the polypeptide at different sites, yielding a second group of fragments. Sanger used chemical methods to determine the sequence of amino acids in these small fragments.
 

@@ -24,8 +24,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Shorthand note
-email: tangvinhha2005@gmail.com
+title: Indexma
 author: exma23
 
 # Copyright setting
