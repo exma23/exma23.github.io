@@ -24,9 +24,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Tang Ha's blog
+title: Shorthand note
 email: tangvinhha2005@gmail.com
-author: tangha1004
+author: exma23
 
 # Copyright setting
 # You can use any html code, currently below placeholders are available:
@@ -48,7 +48,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.tangha1004.github.io" # the base hostname & protocol for your site, e.g. https://example.com
+url: "https://exma23.github.io" # the base hostname & protocol for your site, e.g. https://example.com
 favicon: "" # the favicon for your site
 
 # Yat date format
@@ -183,8 +183,8 @@ yat:
 #   subheading_style: null  # Custom subheading style (e.g. color: gold)
 
 # Excerpt settings
-# excerpt:
-#   default_image: /assets/images/default-image.jpeg  # Default image when the image style is not none
+excerpt:
+  default_image: /assets/images/dandelion.png  # Default image when the image style is not none
 #   image_style: z          # Image layout style (It's value could be none, left, right, top, z, z-reverse)
 #   image_width: 38.2%      # Image default width
 #   image_height: 160px     # Image default height
@@ -249,7 +249,7 @@ banner:
   opacity: 1.0
   background: "rgba(0, 0, 0, 0.8)"
 
-favicon: "assets/blossom.png"
+favicon: "assets/images/dandelion.png"
 
 
 markdown: kramdown
