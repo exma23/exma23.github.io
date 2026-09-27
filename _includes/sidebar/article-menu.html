@@ -15,79 +15,97 @@
   function generateContent() {
     var menu = document.querySelector(".post-menu");
     var menuContent =  menu.querySelector(".post-menu-content");
-    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+    var headings = document.querySelector(".post-content").querySelectorAll("h1, h2, h3, h4, h5, h6");
 
     // Hide menu when no headings
-    if (headings.length === 0) {
+    if (headings.length == 0) {
       return menu.style.display = "none";
     }
 
-    // Generate post menu
+    // Generate nested post menu
     var menuHTML = '';
+    var stack = [];
+    var openUls = 0;
     for (var i = 0; i < headings.length; i++) {
       var h = headings[i];
+      var level = parseInt(h.tagName.substring(1));
+
+      if (stack.length > 0 && level > stack[stack.length - 1]) {
+        // Deeper: open a nested list inside the previous item
+        menuHTML += '<ul>';
+        openUls += 1;
+      } else if (stack.length > 0 && level < stack[stack.length - 1]) {
+        // Shallower: close previous item and nested lists up to this level
+        menuHTML += '</li>';
+        while (stack.length > 1 && level < stack[stack.length - 1]) {
+          menuHTML += '</ul></li>';
+          stack.pop();
+          openUls -= 1;
+        }
+      } else if (stack.length > 0) {
+        // Same level: close previous item (sibling)
+        menuHTML += '</li>';
+      } else {
+        // First item: open root list
+        menuHTML += '<ul>';
+        openUls += 1;
+      }
+
+      stack.push(level);
       menuHTML += (
-        '<li class="h-' + h.tagName.toLowerCase() + '">'
-        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+        '<li class="h-h' + level + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a>');
     }
 
-    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+    // Close remaining open items and lists
+    menuHTML += '</li>';
+    for (var i = 1; i < openUls; i++) {
+      menuHTML += '</ul></li>';
+    }
+    menuHTML += '</ul>';
+
+    menuContent.innerHTML = menuHTML;
 
     // The header element
     var header = document.querySelector('header.site-header');
 
-    function doMenuCollapse(index, over_items) {
-      var items = menuContent.firstChild.children;
+    function doMenuCollapse(activeItem) {
+      var items = menuContent.querySelectorAll('li');
 
-      if (over_items == undefined) {
-        over_items = 20;
-      }
-
-      if (items.length < over_items) {
+      if (items.length < 20) {
         return;
       }
 
-      var activeItem = items[index];
-      var beginItem = activeItem
-      var endItem = activeItem
-      var beginIndex = index;
-      var endIndex = index + 1;
-      while (beginIndex >= 0
-        && !items[beginIndex].classList.contains('h-h2')) {
-        beginIndex -= 1;
+      // Hide all nested lists
+      var nested = menuContent.querySelectorAll('ul ul');
+      for (var i = 0; i < nested.length; i++) {
+        nested[i].style.display = 'none';
       }
-      while (endIndex < items.length
-        && !items[endIndex].classList.contains('h-h2')) {
-        endIndex += 1;
+
+      if (!activeItem) {
+        return;
       }
-      for (var i = 0; i < beginIndex; i++) {
-        item = items[i]
-        if (!item.classList.contains('h-h2')) {
-          item.style.display = 'none';
-        }
+
+      // Reveal the subtree of the top-level item containing the active item
+      var root = menuContent.firstElementChild;
+      var top = activeItem;
+      while (top.parentElement !== root) {
+        top = top.parentElement;
       }
-      for (var i = beginIndex + 1; i < endIndex; i++) {
-        item = items[i]
-        // if (!item.classList.contains('h-h2')) {
-          item.style.display = '';
-        // }
-      }
-      for (var i = endIndex; i < items.length; i++) {
-        item = items[i]
-        if (!item.classList.contains('h-h2')) {
-          item.style.display = 'none';
-        }
+      var show = top.querySelectorAll('ul');
+      for (var i = 0; i < show.length; i++) {
+        show[i].style.display = '';
       }
     }
 
     // Init menu collapsed
-    doMenuCollapse(-1);
+    doMenuCollapse(null);
 
     // Active the menu item
     window.addEventListener('scroll', function (event) {
       var lastActive = menuContent.querySelector('.active');
       var changed = true;
-      var activeIndex = -1;
+      var curActive = null;
       for (var i = headings.length - 1; i >= 0; i--) {
         var h = headings[i];
         var headingRect = h.getBoundingClientRect();
@@ -98,10 +116,9 @@
         if (headingRect.top <= headerHeight) {
           var id = 'h-' + h.getAttribute('id');
           var a = menuContent.querySelector('a[href="#' + id  + '"]');
-          var curActive = a.parentNode;
+          curActive = a ? a.parentNode : null;
           if (curActive) {
             curActive.classList.add('active');
-            activeIndex = i;
           }
           if (lastActive == curActive) {
             changed = false;
@@ -110,10 +127,10 @@
         }
       }
       if (changed) {
-        if (lastActive) {
+        if (lastActive && lastActive != curActive) {
           lastActive.classList.remove('active');
         }
-        doMenuCollapse(activeIndex);
+        doMenuCollapse(curActive);
       }
       event.preventDefault();
     });

@@ -19,11 +19,17 @@
       $indent: divide($base-font-size, 4);
       $active-bgcolor: #ecebec;
 
-      @for $i from 2 to 7 {
-        .h-h#{$i} {
-          padding-inline-start: $indent + ($i - 2) * $base-font-size * 1.3;
-          font-size: $base-font-size * 1.1;
-          line-height: 1.4;
+      li {
+        padding-inline-start: $indent;
+        font-size: $base-font-size * 1.1;
+        line-height: 1.4;
+      }
+
+      ul {
+        margin-inline-start: $base-font-size * 0.9;
+
+        li {
+          font-size: $base-font-size * 1.0;
         }
       }
 
